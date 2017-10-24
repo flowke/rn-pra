@@ -19,19 +19,13 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
+export default class App extends Component{
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Text style={styles.instructions}>
-                    To get started, edit App.js
-                </Text>
-                <Text style={styles.instructions}>
-                    {instructions}
-                </Text>
+            <View
+                style={S.marginBox}
+            >
+                <Text>fdlk</Text>
             </View>
         );
     }
@@ -39,21 +33,16 @@ export default class App extends Component<{}> {
 
 
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+const S = StyleSheet.create({
+    marginBox: {
+        position: 'absolute',
+        top: 100,
+        paddingLeft: 7,
+        paddingRight: 8,
+        backgroundColor: '#5858c6'
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
+
 });
+
+// console.log(styles, 'my');
+// console.log(styles.welcome, 'my');
