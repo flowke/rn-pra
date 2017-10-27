@@ -9,40 +9,51 @@ import {
     Platform,
     StyleSheet,
     Text,
-    View
+    View,
+    PixelRatio
 } from 'react-native';
 
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-    android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
-export default class App extends Component{
+export default class App extends Component<{}> {
     render() {
         return (
-            <View
-                style={S.marginBox}
-            >
-                <Text>fdlk</Text>
+            <View style={[S.container]}>
+                <View style={[S.searchBar]}>
+                    <Text>搜索栏</Text>
+                </View>
+                <View style={[S.ad]}>
+                    <Text>轮播广告</Text>
+                </View>
+                <View style={[S.products]}>
+                    <Text> 商品列表</Text>
+                </View>
             </View>
         );
     }
 }
 
-
-
 const S = StyleSheet.create({
-    marginBox: {
-        position: 'absolute',
-        top: 100,
-        paddingLeft: 7,
-        paddingRight: 8,
-        backgroundColor: '#5858c6'
+    container: {
+        flex: 1
     },
+    searchBar: {
+        marginTop: 20,
+        height: 40,
+        backgroundColor: 'red',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    ad: {
+        height: 180,
+        backgroundColor: 'green',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    products: {
+        flex: 1,
+        backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
 
 });
-
-// console.log(styles, 'my');
-// console.log(styles.welcome, 'my');
